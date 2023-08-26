@@ -96,7 +96,7 @@ public class IntList {
      */
     private static IntList copy(IntList A) {
         if(A == null) return null;
-        IntList p = new IntList(A.first, copy(A.rest));
+        return new IntList(A.first, copy(A.rest));
     }
 
     public static IntList catenate(IntList A, IntList B) {
