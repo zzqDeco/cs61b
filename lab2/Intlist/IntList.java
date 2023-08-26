@@ -81,17 +81,26 @@ public class IntList {
      */
 
     public static IntList dcatenate(IntList A, IntList B) {
-        //TODO:  fill in method
-        return null;
+        IntList p = A;
+        if(p == null) return B;
+        while (p.rest != null) {
+            p = p.rest;
+        }
+        p.rest = B;
+        return A;
     }
 
     /**
      * Returns a list consisting of the elements of A followed by the
      * * elements of B.  May NOT modify items of A.  Use 'new'.
      */
+    private static IntList copy(IntList A) {
+        if(A == null) return null;
+        IntList p = new IntList(A.first, copy(A.rest));
+    }
+
     public static IntList catenate(IntList A, IntList B) {
-        //TODO:  fill in method
-        return null;
+        return dcatenate(copy(A), copy(B));
     }
 
 
