@@ -33,6 +33,11 @@ public class IntList {
         this(0, null);
     }
 
+    public static int size(IntList A) {
+        if(A == null) return 0;
+        return size(A.rest) + 1;
+    }
+
     /**
      * Returns a list equal to L with all elements squared. Destructive.
      */
@@ -104,7 +109,17 @@ public class IntList {
     }
 
     public static IntList reverse(IntList A) {
-        return null;
+        int[] ans = new int[size(A)];
+        int i = 0;
+        for(IntList now = A;now != null;now = now.rest) {
+            ans[i] = now.first;
+            i++;
+        }
+        for(IntList now = A;now != null;now = now.rest) {
+            i--;
+            now.first = ans[i];
+        }
+        return A;
     }
 
 
