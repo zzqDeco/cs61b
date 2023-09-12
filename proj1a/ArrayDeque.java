@@ -17,7 +17,7 @@ public class ArrayDeque<T> implements Deque<T> {
         }
         array = nowArray;
         head = 0;
-        tail = arraySize;
+        tail = size;
         arraySize *= 2;
     }
 
@@ -30,7 +30,7 @@ public class ArrayDeque<T> implements Deque<T> {
         }
         array = nowArray;
         head = 0;
-        tail = arraySize;
+        tail = size;
         arraySize /= 2;
     }
     @Override
@@ -99,7 +99,7 @@ public class ArrayDeque<T> implements Deque<T> {
 
     @Override
     public T get(int index) {
-        if(index >= arraySize) return null;
+        if(index >= size) return null;
         index = (head + index) % arraySize;
         return array[index];
     }
