@@ -85,7 +85,7 @@ public class LinkedListDeque<T> implements deque<T>{
         for(int i=1;i<index;i++) {
             ans = ans.next;
         }
-        return ans.next.val;
+        return ans.val;
     }
 
     private T getTo(Node now,int index) {
