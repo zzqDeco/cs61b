@@ -53,7 +53,7 @@ public class LinkedListDeque<T> implements deque<T>{
     @Override
     public void printDeque() {
         for(Node i = head.next;i != head;i = i.next) {
-            System.out.print(i.val.toString()+" ");
+            System.out.print(i.val.toString() + " ");
         }
         System.out.println();
     }
@@ -64,7 +64,7 @@ public class LinkedListDeque<T> implements deque<T>{
         size--;
         T ans = head.next.val;
         head.next.next.last = head;
-        head.next=head.next.next;
+        head.next = head.next.next;
         return ans;
     }
 
