@@ -11,8 +11,9 @@ public class ArrayDeque<T> implements Deque<T> {
     private void oversize() {
         T[] nowArray = (T[]) new Object[arraySize * 2];
         int j = 0;
-        for(int i = head;i != tail;i=(i + 1)% arraySize) {
+        for(int i = head;i != tail;i=(i + 1) % arraySize) {
             nowArray[j] = array[i];
+            j++;
         }
         array = nowArray;
         head = 0;
@@ -25,6 +26,7 @@ public class ArrayDeque<T> implements Deque<T> {
         int j = 0;
         for(int i = head;i != tail;i=(i + 1)% arraySize) {
             nowArray[j] = array[i];
+            j++;
         }
         array = nowArray;
         head = 0;
