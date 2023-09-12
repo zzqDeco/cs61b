@@ -103,6 +103,10 @@ public class IntList {
         return dcatenate(copy(A), copy(B));
     }
 
+    public static IntList reverse(IntList A) {
+        return null;
+    }
+
 
 
 
