@@ -4,6 +4,7 @@ public class ArrayDeque<T> implements deque<T>{
     public ArrayDeque() {
         array = (T[]) new Object[8];
         head = tail = 0;
+        size = 0 ;
         arraySize = 8;
     }
 

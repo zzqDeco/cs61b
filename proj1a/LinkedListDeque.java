@@ -28,7 +28,7 @@ public class LinkedListDeque<T> implements deque<T>{
     public void addFirst(T item) {
         size++;
         Node now = new Node(item, head, head.next);
-        head.next.last = head;
+        head.next.last = now;
         head.next = now;
     }
 
